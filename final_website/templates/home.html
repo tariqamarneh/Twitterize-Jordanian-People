@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://platform.twitter.com/widgets.js"></script>
+        <title>Twitterize people</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=1">
+        <script>link = "{{ tlink }}";</script>
+    </head>
+    <body>
+        <header>
+            <h2 class="logo">Twitterize people</h2>
+            <nav class="navigation">
+                <a class="H">Home</a>
+                <a class="A">About</a>
+                <a class="S">Services</a>
+                <a class="C">Contact</a>
+                <button class="btnlogin-popup">Login</button>
+            </nav>
+        </header>
+        <div class="wrapper">
+            <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+            <div class="form-box login">
+                <form>
+                    <h2 style="margin-bottom: 40px;">Login</h2>
+                    <div class="twitter-image">
+                        <a>
+                            <img src="https://cdn.cms-twdigitalassets.com/content/dam/developer-twitter/auth-docs/sign-in-with-twitter-gray.png.twimg.1920.png" alt="image button">
+                        </a>
+                    </div>
+                    <div class="login-register">
+                        <p>Dont have an account?<a href="https://twitter.com/i/flow/signup" class="register-link"> Register</a></p>
+                    </div>
+                </form>
+            </div>
+            <div class="form-box auth">
+                <h2>Login</h2>
+                <form method="post" class="value">
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="mail"></ion-icon>
+                        </span>
+                        <input required type="text" id="value" name="value">
+                        <label for="value">Enter your authentication code</label>
+                    </div>
+                    <button type="submit" class="btn">Verify</button>
+                </form>
+            </div>
+
+            <div class="form-box Home">
+                <h2>Home</h2>
+                <div class="HH">
+                    Welcome to our web application for classifying Twitter users into one of the Big Five personality traits using machine learning. Our app provides accurate predictions for each user's personality trait based on their Twitter profile, helping you gain insight into their behavior and preferences. Simply enter a Twitter handle, and we'll do the rest!
+                </div>
+            </div>
+            <div class="form-box About">
+                <h2>About</h2>
+                <div class="AA">
+                    Our team consists of machine learning experts and psychologists who are passionate about understanding human behavior through data. We believe that personality traits are a critical component of understanding people, and that Twitter provides a unique opportunity to explore this topic at scale. By leveraging advanced machine learning algorithms, we've developed a powerful model that can accurately classify users into one of the Big Five traits: Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism.
+                </div>
+            </div>
+            <div class="form-box Services">
+                <h2>Services</h2>
+                <div class="SS">
+                    Our web application provides a fast, easy, and accurate way to classify Twitter users into one of the Big Five personality traits. By entering a Twitter handle, you'll receive a prediction for the user's personality trait along with a brief description of what that trait entails. Our app is useful for a wide range of applications, including marketing, psychology research, and social media analysis. We offer both a free and a premium version of our app, which includes additional features such as exporting data and analyzing trends over time.
+                </div>
+            </div>
+            <div class="form-box Contact">
+                <h2>Contact</h2>
+                <div class="CC">
+                    We're always happy to hear from our users and potential partners! If you have any questions or feedback about our web application for classifying Twitter users into one of the Big Five personality traits, please don't hesitate to get in touch. You can reach us via email, phone, or by filling out the contact form on this page. We look forward to hearing from you!
+                </div>
+            </div>
+        </div>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

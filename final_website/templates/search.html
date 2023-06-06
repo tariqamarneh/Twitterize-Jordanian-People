@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://platform.twitter.com/widgets.js"></script>
+        <title>Search</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}?v=1">
+    </head>
+    <body>
+        <header>
+            <h2 class="logo">Twitterize people</h2>
+            <nav class="navigation">
+                <form action="{{ url_for('logout') }}" method="POST">
+                    <button class="btnlogin-popup" type="submit">Logout</button>
+                </form>
+            </nav>
+        </header>
+        <div class="wrapper active-popup search">
+            <div class="form-box login">
+                <form method="post" class="username">
+                    <h2 style="margin-bottom: 40px;">Search</h2>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="person-circle-outline"></ion-icon>
+                        </span>
+                        <input required type="text" id="User_name" name="User_name">
+                        <label for="User_name">Enter a Username</label>
+                    </div>
+                    <div class="search_notme">
+                        <button type="submit" class="btn" name="submit_button" value="submit">Show user trait</button>
+                    </div>
+                    <h4>or</h4>
+                    <div class="search_me">
+                        <button type="submit" class="btn" name="submit_button" value="submit_a"  onclick="document.getElementById('User_name').removeAttribute('required')">Show my trait</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="{{ url_for('static', filename='js/script2.js') }}"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

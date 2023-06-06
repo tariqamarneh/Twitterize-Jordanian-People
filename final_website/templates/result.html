@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Result</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style3.css') }}?v=1">
+    </head>
+    <body>
+        <header>
+            <h2 class="logo">Twitterize people</h2>
+            <nav class="navigation">
+                <form action="{{ url_for('logout') }}" method="POST">
+                    <button class="btnlogin-popup" type="submit">Logout</button>
+                </form>
+            </nav>
+        </header>
+        <div class="wrapper">
+            <div class="header"><h2>Result</h2></div>
+            <div class="disuser"><p class="btnn"> @{{username}} </p></div>
+            <div class="distrait"><p class="btnn">{{trait}} </p></div>
+            <div class="distweet"><p class="btnn big">{{desc}}</p></div>
+            <div class="showstat"><button class="stat-btn btnn click">View plot</button></div>
+            <div class="searchagain"><button class="btnn click" onclick="window.location.href='http://127.0.0.1:5000/search'">Search again</button></div>
+            <div class="desc"><button class="btnn click" onclick="openLinkInNewTab('{{ link }}')">View profile</button></div>
+            <script>
+                function openLinkInNewTab(link) {
+                    window.open(link);}
+            </script>
+            <div class="statistics">
+                <div class="back-btn"><button class="btnn click">Back</button></div>
+                <div class="image"><img class="btnn big mm" src="{{ url_for('static', filename='plot.png') }}" ></div>
+            </div>
+
+
+        </div>
+
+    <script src="{{ url_for('static', filename='js/script2.js') }}"></script>
+    </body>
+
+</html>
