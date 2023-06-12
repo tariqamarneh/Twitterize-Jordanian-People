@@ -130,8 +130,15 @@ class Trait():
         df['Emoji_Count'] = df['tweet'].apply(lambda x: emoji_counter(x))
 
         def to_arabic(text):
-            translated_text = mtranslate.translate(text, "ar")
-            return translated_text
+            text = text.split(' ')
+            clean = []
+            for i in text:
+                if re.match(r'^[a-zA-Z]+$', i):
+                    translated_text = mtranslate.translate(i, "ar")
+                    clean.append(translated_text)
+                else:
+                    clean.append(i)
+            return " ".join(clean)
 
         def normalizeArabic(text):
             text = text.strip()
@@ -223,23 +230,23 @@ class Trait():
             nose = ["'", "`", "-", r"\\"]
             for e in eyes:
                 for n in nose:
-                    for s in ["\)", "d", "]", "}", "p"]:
+                    for s in [")", "d", "]", "}", "p"]:
                         smilefaces.append(e + n + s)
                         smilefaces.append(e + s)
-                    for s in ["\(", "\[", "{"]:
+                    for s in ["(", "[", "{"]:
                         sadfaces.append(e + n + s)
                         sadfaces.append(e + s)
-                    for s in ["\|", "\/", r"\\"]:
+                    for s in ["|", "/", r"\\"]:
                         neutralfaces.append(e + n + s)
                         neutralfaces.append(e + s)
                     # reversed
-                    for s in ["\(", "\[", "{"]:
+                    for s in ["(", "[", "{"]:
                         smilefaces.append(s + n + e)
                         smilefaces.append(s + e)
-                    for s in ["\)", "\]", "}"]:
+                    for s in [")", "]", "}"]:
                         sadfaces.append(s + n + e)
                         sadfaces.append(s + e)
-                    for s in ["\|", "\/", r"\\"]:
+                    for s in ["|", "/", r"\\"]:
                         neutralfaces.append(s + n + e)
                         neutralfaces.append(s + e)
 
