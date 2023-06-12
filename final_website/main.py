@@ -38,7 +38,6 @@ def home():
                 login_user(user)
                 return redirect(url_for("search"))
             except:
-                flash("Incorrect authentication code.", category="error")
                 auth.regenerate()
                 return render_template("home.html", link=auth.redirect_url)
         else:
