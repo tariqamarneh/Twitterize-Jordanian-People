@@ -16,11 +16,12 @@ git clone https://github.com/tariqamarneh/jumaa-osama-gp2.git
 ```
 2. Navigate to the project directory:
 ```
-cd jumaa-osama-gp2
+cd jumaa-osama-gp2/final_website
 ```
-3. Install the required dependencies by running the following command:
+3. Install the required dependencies by running the following commands:
 ```
 pip install -r requirements.txt
+python -m textblob.download_corpora
 ```
 4. Run the website locally using the following command:
 ```
