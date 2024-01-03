@@ -16,7 +16,7 @@ git clone https://github.com/tariqamarneh/Twitterize-Jordanian-People.git
 ```
 2. Navigate to the project directory:
 ```
-cd Twitterize-Jordanian-People-gp2/final_website
+cd Twitterize-Jordanian-People-gp2
 ```
 3. Install the required dependencies by running the following commands:
 ```
