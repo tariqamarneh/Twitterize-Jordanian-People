@@ -12,11 +12,11 @@ Twitterize Jordanian People is a website that predicts Twitter users' personalit
 Follow the steps below to set up and run the project on your local machine:
 1. Clone the repository to your local machine using the following command:
 ```
-git clone https://github.com/tariqamarneh/jumaa-osama-gp2.git
+git clone https://github.com/tariqamarneh/Twitterize-Jordanian-People.git
 ```
 2. Navigate to the project directory:
 ```
-cd jumaa-osama-gp2/final_website
+cd Twitterize-Jordanian-People-gp2/final_website
 ```
 3. Install the required dependencies by running the following commands:
 ```
