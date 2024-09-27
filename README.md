@@ -57,6 +57,6 @@ git checkout -b feature/my-contribution
 
 ## Contact
 If you have any questions, suggestions, or feedback, please feel free to contact the project maintainer(s):
-* Tariq S. Aamarneh - tariqS.naser@gmail.com
+* Tariq S. Amarneh - tariqS.naser@gmail.com
 * Osama Al-zamel - zamelosama5@gmail.com
 * Mohamad Jumaa Al-Sharif - Mohamadjumaa718@gmail.com
